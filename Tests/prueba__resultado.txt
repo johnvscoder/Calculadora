@@ -1,0 +1,7 @@
+2+2 4 si
+3+3 6 si
+
+Estadisticas
+Cantidad de pruebas positivas: 2
+Cantidad de pruebas negativas: 0
+Cantidad de pruebas total: 2

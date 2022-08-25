@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <math.h>
-#include "matematicas/matematicas.c"
+#include "math.c"
 
 
 void escribir(char const *texto, char const *ruta);
@@ -27,9 +27,8 @@ int main() {
 
 void escribir(char const *texto, char const *ruta) {
     FILE *file = fopen(ruta, "a+t");
-    for(int i = 0; i < strlen(texto); i++) {
+    for(int i = 0; i < strlen(texto); i++)
         fputc(texto[i], file);
-    }
     fclose(file);
 }
 
@@ -55,8 +54,9 @@ void ejecutarPrueba(char const *ruta, int estadisticas) {
         bool saltoLineaEncontrado = false;
 
         char *nuevaRuta = (char*) calloc(300, 1);
-        strcpy(nuevaRuta, "resultado__");
-        strcat(nuevaRuta, ruta);
+        
+        strncpy(nuevaRuta, ruta, strlen(ruta) - 4);
+        strcat(nuevaRuta, "__resultado.txt");
 
         while((character = fgetc(file)) != EOF) {
             if(character == ' ') {
