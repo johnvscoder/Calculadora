@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "matematicas.c"
+#include "math.c"
 #include <stdlib.h>
 
 #define MAX_LON 600
